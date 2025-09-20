@@ -1,10 +1,26 @@
-POST http://localhost:3000/items
+@HOST = http://localhost:3000
+
+### Create item
+POST {{HOST}}/items
 Content-Type:  application/json
 
 {
-  "id": 0,
   "name": "first"
 }
 
-###
-GET http://localhost:3000/items
+### Get all
+GET {{HOST}}/items
+
+### Get by id
+GET {{HOST}}/items/1
+
+### Update by id
+PUT {{HOST}}/items/1
+Content-Type: application/json
+
+{
+  "name": "changedName"
+}
+
+### Delete by id
+DELETE {{HOST}}/items/2
